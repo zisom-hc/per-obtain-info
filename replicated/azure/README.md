@@ -9,6 +9,7 @@ This script assumes that:
   * PostgreSQL Flexible and Single Servers
   * Redis Cache for Azure
   * Storage Accounts
+  * Containers and Blobs that reside within the Storage Account used by TFE
  
 Steps to Perform:
 
@@ -17,5 +18,5 @@ Steps to Perform:
 3. `cd` to the directory where the copy of the script you created resides
 4. Install the Azure PowerShell module within PowerShell, if you have not already using the instructions here: https://learn.microsoft.com/en-us/powershell/azure/install-azure-powershell?view=azps-10.2.0
 5. Execute `Connect-AzAccount` to login to Azure within your terminal, if not done so already
-6. Provide values for each of these parameters, then execute the command: `.\Obtain-info-azure.ps1 -SubscriptionName <> -ResourceGroupName <> -VMScaleSetName <> -PostgreSQLServerName <> -StorageAccountName <> -RedisCacheName <>`
+6. Replace $REPLACE with the appropriate value for each of the parameters, then execute the command: `.\Obtain-info-azure.ps1 -SubscriptionName $REPLACE -ResourceGroupName $REPLACE -VMScaleSetName $REPLACE -PostgreSQLServerName $REPLACE -StorageAccountName $REPLACE -RedisCacheName $REPLACE`
    * Only include the `-RedisCacheName` parameter if your team has an Active/Active installation of TFE provisioned.
